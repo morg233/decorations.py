@@ -1,1 +1,31 @@
+def print_decorations(month, day):
+    date = month * 100 + day
+    found = False
 
+    if 1003 <= date <= 1105:
+        print("Spooky Things")
+        found = True
+
+    if 1028 <= date <= 1128:
+        print("Turkeys")
+        found = True
+
+    if date >= 1115 or date <= 104:
+        print("Strings of Lights")
+        found = True
+
+    if 621 <= date <= 710:
+        print("U.S. Flags")
+        found = True
+
+    if not found:
+        print("Personal")
+
+
+try:
+    month = int(input("Enter month: "))
+    day = int(input("Enter day: "))
+    print_decorations(month, day)
+
+except ValueError:
+    print("error: integers expected")
